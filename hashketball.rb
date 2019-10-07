@@ -208,9 +208,23 @@ def player_stats(players_name)
   end
   return rebounds
 end
-  
-  
- 
+
+def most_points_scored
+  most_points = 0 
+  player_scored_most = ""
+  game_hash.map do |place, team|
+    team[:players]. do |player|
+      if player[:points] > most_points
+        most_points = player[:points]
+        player_scored_most = player[:player_name]
+      end
+      
+    end
+   player_scored_most
+  end
+end
+
+
 
 
 
